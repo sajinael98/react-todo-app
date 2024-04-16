@@ -1,4 +1,4 @@
-import { ActionIcon, Group, Paper, Text, Tooltip } from '@mantine/core'
+import { ActionIcon, Group, Text, Tooltip } from '@mantine/core'
 import { IconPlus } from '@tabler/icons-react'
 import generateUniqueId from 'generate-unique-id'
 import { useDispatch } from 'react-redux'

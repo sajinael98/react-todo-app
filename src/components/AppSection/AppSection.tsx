@@ -1,5 +1,5 @@
 import { Container, ContainerProps } from '@mantine/core'
-import React, { PropsWithChildren } from 'react'
+import { PropsWithChildren } from 'react'
 
 const AppSection = ({ children, ...props }: PropsWithChildren<ContainerProps>) => {
     return (

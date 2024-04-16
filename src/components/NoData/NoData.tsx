@@ -1,7 +1,6 @@
 import { Flex, Paper, Stack, Text, ThemeIcon } from '@mantine/core'
-import React from 'react'
-import classes from './NoData.module.css'
 import { IconDatabase } from '@tabler/icons-react'
+import classes from './NoData.module.css'
 
 const NoData = () => {
     return (

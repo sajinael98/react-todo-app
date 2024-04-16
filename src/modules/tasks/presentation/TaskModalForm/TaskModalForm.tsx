@@ -1,10 +1,10 @@
 import { Button, Checkbox, Group, Modal, Stack, TextInput, Textarea } from '@mantine/core'
+import { DatePickerInput } from '@mantine/dates'
 import { useDisclosure } from '@mantine/hooks'
+import dayjs from 'dayjs'
 import { forwardRef, useEffect, useImperativeHandle } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 import { TaskModalFormProps, TaskModalFormRef } from './TaskModalForm.interface'
-import { DatePickerInput } from '@mantine/dates';
-import dayjs from 'dayjs';
 
 const TaskModalForm = forwardRef<TaskModalFormRef, TaskModalFormProps>(
     ({ onSubmit, values = {
@@ -40,7 +40,7 @@ const TaskModalForm = forwardRef<TaskModalFormRef, TaskModalFormProps>(
         return (
             <Modal title={title} onClose={closeHandler} opened={opened}>
                 <Stack>
-                    <Controller name='date' control={form.control} render={({ field: { value, onChange, ...field }, fieldState }) => <DatePickerInput
+                    <Controller name='date' control={form.control} render={({ field: { value, onChange, ...field } }) => <DatePickerInput
                         label="Creation Date"
                         styles={{ label: { marginBottom: 5 } }}
                         value={dayjs(value).toDate()}
