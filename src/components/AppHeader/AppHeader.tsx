@@ -1,9 +1,10 @@
-import { ActionIcon, AppShellHeader, Group, TextInput, useComputedColorScheme, useMantineColorScheme } from '@mantine/core';
+import { ActionIcon, AppShellHeader, Burger, Group, TextInput, useComputedColorScheme, useMantineColorScheme } from '@mantine/core';
 import { IconMoon, IconSearch, IconSun } from '@tabler/icons-react';
 import cx from 'clsx';
 import classes from './AppHeader.module.css';
+import { NavbarState } from '../../types/navbar';
 
-const AppHeader = () => {
+const AppHeader = ({ opend, toggle }: NavbarState) => {
     const { setColorScheme } = useMantineColorScheme();
     const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
 
@@ -23,6 +24,7 @@ const AppHeader = () => {
                         <IconSun className={cx('icon', classes.light)} stroke={1.5} />
                         <IconMoon className={cx('icon', classes.dark)} stroke={1.5} />
                     </ActionIcon>
+                    <Burger hiddenFrom='md' opened={opend} onClick={toggle} />
                 </Group>
             </Group>
         </AppShellHeader>

@@ -9,8 +9,8 @@ const TasksList = ({ tasks }: TasksListProps) => {
     }
     return (
         <SimpleGrid cols={{ base: 1, sm: 2, lg: 4 }}>
-            {tasks.map((task) => <div key={task.id}>
-                <TaskCard task={task} />
+            {tasks.map((task, index) => <div key={task.id}>
+                <TaskCard index={index} task={task} />
             </div>)}
         </SimpleGrid>
     )
