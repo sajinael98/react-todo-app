@@ -1,29 +1,32 @@
 .link {
-    display: block;
     text-decoration: none;
     border-top-right-radius: var(--mantine-radius-md);
     border-bottom-right-radius: var(--mantine-radius-md);
-    color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
     padding: 0 var(--mantine-spacing-md);
-    font-size: var(--mantine-font-size-sm);
     margin-right: var(--mantine-spacing-md);
-    font-weight: 500;
     height: rem(44px);
-    line-height: rem(44px);
-    text-transform: capitalize;
 
-    color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-gray-6));
-    
     &:hover {
         background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
         color: light-dark(var(--mantine-color-dark-6), var(--mantine-color-gray-0));
     }
-    
+
+    & .title {
+        color: light-dark(var(--mantine-color-gray-5), var(--mantine-color-gray-6));
+        font-size: var(--mantine-font-size-sm);
+        font-weight: 500;
+        line-height: rem(44px);
+        text-transform: capitalize;
+    }
+
     &[data-active] {
         &,
         &:hover {
             background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
-            color: light-dark(var(--mantine-color-dark-6), var(--mantine-color-gray-0));
+        }
+
+        .title{
+            color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-gray-5));
         }
     }
 }

@@ -1,11 +1,11 @@
-import { Outlet, createBrowserRouter } from 'react-router-dom';
+import { Outlet, createBrowserRouter, Link } from 'react-router-dom';
 import AppLayout from './components/AppLayout';
 import TodosListPage from './pages/TodosListPage';
 import ImportantTasksListPage from './pages/ImportantTasksListPage';
 
 export const router = createBrowserRouter([
     {
-        path: '',
+        path: '/',
         element: <AppLayout><Outlet /></AppLayout>,
         children: [
             {
@@ -16,6 +16,7 @@ export const router = createBrowserRouter([
                 path: 'important',
                 element: <ImportantTasksListPage />
             }
-        ]
+        ],
+        errorElement: <div><Link to={'/'}>saji </Link></div>
     }
 ]);

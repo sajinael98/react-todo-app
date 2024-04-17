@@ -18,7 +18,7 @@ const ImportantTasksListPage = () => {
         <>
             <AppSection>
                 <Group justify='space-between'>
-                    <Text fz='h3' fw={700}>Tasks</Text>
+                    <Text fz='h3' fw={700}>Important Tasks</Text>
                 </Group>
             </AppSection>
             <AppSection>

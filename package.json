@@ -1,7 +1,6 @@
 {
-  "homepage": "https://sajinael98.github.io/react-todo-app/index.html",
-  "name": "vite-min-template",
-  "private": true,
+  "name": "react-todo-app",
+  "private": false,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
